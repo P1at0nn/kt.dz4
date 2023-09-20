@@ -42,7 +42,7 @@ class MainKtTest {
         val transfer = 100_000
         val transfermonf = 0
         val result= komission(type,transfer,transfermonf)
-        assertEquals(-1.0,result,0.1)  //непроходит по лимитам
+        assertEquals(-3.0,result,0.1)  //непроходит по лимитам
     }
     @Test
     fun komissionVkfalse1() {
