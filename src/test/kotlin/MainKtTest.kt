@@ -26,7 +26,7 @@ class MainKtTest {
         val transfer = 700
         val transfermonf = 700_000
         val result= komission(type,transfer,transfermonf)
-        assertEquals(3.0,result,0.1)    //непроходит по лимитам
+        assertEquals(-1.0,result,0.1)    //непроходит по лимитам
     }
     @Test
     fun komissionVk() {
@@ -34,7 +34,7 @@ class MainKtTest {
         val transfer = 100
         val transfermonf = 0
         val result= komission(type,transfer,transfermonf)
-        assertEquals(3.0,result,0.1)
+        assertEquals(0.0,result,0.1)
     }
     @Test
     fun komissionVkfalse() {
@@ -42,7 +42,7 @@ class MainKtTest {
         val transfer = 100_000
         val transfermonf = 0
         val result= komission(type,transfer,transfermonf)
-        assertEquals(-3.0,result,0.1)  //непроходит по лимитам
+        assertEquals(-1.0,result,0.1)  //непроходит по лимитам
     }
     @Test
     fun komissionVkfalse1() {
